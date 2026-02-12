@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - PHARMACY CRM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" title="PHARMACY CRM Home">
+                <i data-lucide="zap"></i>
+                PHARMACY CRM
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Product</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html#pricing" class="btn-primary">Get App Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="policy-content">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>At PHARMACY CRM, we take your privacy seriously. This policy explains how we collect, use, and protect
+                your
+                personal information.</p>
+
+            <h2>1. Information We Collect</h2>
+            <p>During purchase, we collect your name, email address, and payment details. This information is necessary
+                to deliver the digital product and license key to you.</p>
+
+            <h2>2. How We Use Your Information</h2>
+            <p>We use your information to:</p>
+            <ul>
+                <li>Process your payment and deliver the product.</li>
+                <li>Send you a purchase confirmation and license key.</li>
+                <li>Provide technical support and updates.</li>
+                <li>Communicate important changes to our services.</li>
+            </ul>
+
+            <h2>3. Payment Security</h2>
+            <p>We do not store your credit card or bank details on our servers. All payments are processed through
+                secure, PCI-compliant payment gateways like PhonePe.</p>
+
+            <h2>4. Data Protection</h2>
+            <p>We implement industry-standard security measures to protect your personal data from unauthorized access
+                or disclosure.</p>
+
+            <h2>5. Third-Party Sharing</h2>
+            <p>We do not sell or rent your personal information to third parties. We only share data with service
+                providers (like payment processors) necessary to complete your transaction.</p>
+
+            <h2>6. Cookies</h2>
+            <p>Our website uses cookies to enhance your experience and track website performance. You can disable
+                cookies in your browser settings if you prefer.</p>
+
+            <h2>7. Contact Information</h2>
+            <p>If you have any questions regarding your privacy, please email us at privacy@pharmacycrm.example.com.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">PHARMACY CRM</div>
+                    <p>Premium business application solutions for modern enterprises. Instant delivery, lifetime value.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="terms.html">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PHARMACY CRM Solutions. All rights reserved. Your privacy is our priority.</p>
+                <p class="mt-2 fs-sm">Contact: <a href="mailto:support@pharmacycrm.example.com"
+                        class="primary-text">support@pharmacycrm.example.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuBtn.querySelector('i, svg');
+            if (icon) {
+                const isOpen = navLinks.classList.contains('active');
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>

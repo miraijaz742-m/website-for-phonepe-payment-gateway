@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping and Delivery Policy - PHARMACY CRM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" title="PHARMACY CRM Home">
+                <i data-lucide="zap"></i>
+                PHARMACY CRM
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Product</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html#pricing" class="btn-primary">Get App Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="policy-content">
+        <div class="container">
+            <h1>Shipping and Delivery Policy</h1>
+            <p>This policy details the delivery process for our digital products. Since PHARMACY CRM is a digital
+                specialized
+                software, we do not ship physical goods.</p>
+
+            <h2>1. Delivery Method</h2>
+            <p>Our products are delivered digitally via the email address provided during the checkout process. Upon
+                successful payment, you will receive an automated email containing your download links and license
+                activation keys.</p>
+
+            <h2>2. Delivery Timeline</h2>
+            <p>Delivery is <strong>instant</strong>. Once your payment is confirmed by the payment gateway (PhonePe),
+                our system triggers the delivery email immediately. You should receive it within seconds to a few
+                minutes.</p>
+
+            <h2>3. What If I Don't Receive the Email?</h2>
+            <p>If you haven't received your delivery email within 10 minutes, please follow these steps:</p>
+            <ul>
+                <li>Check your Spam or Junk folder.</li>
+                <li>Verify that the email address you entered during checkout is correct.</li>
+                <li>If you still can't find it, contact our support team at support@pharmacycrm.example.com with your
+                    transaction details.</li>
+            </ul>
+
+            <h2>4. Shipping Costs</h2>
+            <p>Being a 100% digital product, there are no shipping charges, handling fees, or physical logistics costs
+                involved.</p>
+
+            <h2>5. Serviceable Areas</h2>
+            <p>Our digital products are available globally. As long as you have an internet connection and a valid
+                payment method, you can purchase and receive PHARMACY CRM anywhere in the world.</p>
+
+            <h2>Contact Us</h2>
+            <p>For any delivery-related inquiries, please contact us at help@pharmacycrm.example.com.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">PHARMACY CRM</div>
+                    <p>Premium business application solutions for modern enterprises. Instant delivery, lifetime value.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="terms.html">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PHARMACY CRM Solutions. All rights reserved. Instant Digital Distribution.</p>
+                <p class="mt-2 fs-sm">Contact: <a href="mailto:support@pharmacycrm.example.com"
+                        class="primary-text">support@pharmacycrm.example.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuBtn.querySelector('i, svg');
+            if (icon) {
+                const isOpen = navLinks.classList.contains('active');
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>

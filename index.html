@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHARMACY CRM - Professional Desktop CRM Solution</title>
+    <meta name="description"
+        content="Get PHARMACY CRM - The ultimate professional desktop application for medical business efficiency. Permanent software license.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" title="PHARMACY CRM Home">
+                <i data-lucide="zap"></i>
+                PHARMACY CRM
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Product</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#pricing" class="btn-primary">Get App Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Professional Desktop CRM,<br>Built for Medical Shops.</h1>
+            <p>Experience the next generation of pharmacy management with PHARMACY CRM Desktop. Specifically designed
+                for speed,
+                reliability, and ease of use on Windows. Get your permanent license today.</p>
+            <div class="flex-center">
+                <a href="#pricing" class="btn-primary">
+                    <i data-lucide="shopping-cart"></i>
+                    Get License Now
+                </a>
+                <a href="about.html" class="btn-outline">
+                    <i data-lucide="info"></i>
+                    Learn More
+                </a>
+            </div>
+
+            <div class="hero-mockup">
+                <div class="mockup-container">
+                    <img src="assets/mockup.jpeg" alt="PHARMACY CRM Dashboard Mockup" class="mockup-img">
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="trust-banner">
+        <div class="container">
+            <i data-lucide="clock" class="icon-lg mb-3"></i>
+            <h2>Instant Digital Delivery</h2>
+            <p>This is a digital product. No physical shipping is required. Your download link and license key will be
+                delivered to your email instantly after successful payment.</p>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose PHARMACY CRM?</h2>
+                <p>Designed to help you manage your business more effectively.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="zap"></i></div>
+                    <h3>Blazing Fast</h3>
+                    <p>Optimized for both desktop and mobile devices to ensure peak performance under any workload.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="shield"></i></div>
+                    <h3>Secure by Default</h3>
+                    <p>Enterprise-grade encryption keeps your data safe and private at all times.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="smartphone"></i></div>
+                    <h3>Cross-Platform</h3>
+                    <p>Seamlessly switch between your desktop and mobile devices with real-time sync.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>One-time payment for lifetime access. No hidden subscriptions.</p>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-badge">BEST VALUE</div>
+                <h3>Lifetime License</h3>
+                <div class="price">₹9,999<span>/one-time</span></div>
+                <ul class="pricing-features">
+                    <li><i data-lucide="check-circle"></i> Permanent Software License</li>
+                    <li><i data-lucide="check-circle"></i> Desktop Version Included</li>
+                    <li><i data-lucide="check-circle"></i> Instant Email Delivery</li>
+                    <li><i data-lucide="check-circle"></i> Lifetime Updates</li>
+                    <li><i data-lucide="check-circle"></i> 24/7 Priority Support</li>
+                </ul>
+                <button class="btn-primary w-full buy-now-btn" data-plan="Professional" data-price="₹9,999">
+                    Buy Now & Get License
+                </button>
+                <p class="mt-3 fs-sm muted-text">
+                    <i data-lucide="lock" class="icon-xs v-middle"></i>
+                    Secured by PhonePe Payment Gateway
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Modal Overlay -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="checkout-modal">
+            <div class="modal-header">
+                <h2>Secure Checkout</h2>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="checkout-step-1">
+                    <div class="order-summary">
+                        <div>
+                            <p class="fs-sm">Product</p>
+                            <h4 id="summary-plan-name">Professional Plan</h4>
+                        </div>
+                        <div class="text-right">
+                            <p class="fs-sm">Total Amount</p>
+                            <span id="summary-price">₹9,999</span>
+                        </div>
+                    </div>
+                    <form class="checkout-form" id="payment-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="cust-name" class="form-control" placeholder="Enter your name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="cust-email" class="form-control" placeholder="email@example.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input type="tel" id="cust-phone" class="form-control" placeholder="10-digit mobile number"
+                                pattern="[0-9]{10}" required>
+                        </div>
+                        <button type="submit" class="btn-phonepe" id="pay-btn">
+                            <span class="btn-text">Pay via PhonePe</span>
+                            <div class="loading-spinner"></div>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="payment-success" id="success-step">
+                    <div class="success-icon">
+                        <i data-lucide="check"></i>
+                    </div>
+                    <h3>Payment Successful!</h3>
+                    <p class="muted-text mt-1">Thank you, <span id="display-name" class="fw-700"></span>. Your order for
+                        <span id="display-plan" class="primary-text fw-700"></span> is confirmed.
+                    </p>
+                    <div class="mt-3">
+                        <p class="fs-sm">The download link and license key have been sent to:</p>
+                        <p class="fw-700" id="display-email"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Customer Support & Help</h2>
+                <p>We're here to help you get the most out of PHARMACY CRM.</p>
+            </div>
+            <div class="max-w-600 text-center">
+                <div class="feature-card dashed-border">
+                    <i data-lucide="mail" class="icon-md primary-text mb-2"></i>
+                    <h3>Need Assistance?</h3>
+                    <p>Our support team is available 24/7 to answer your questions.</p>
+                    <p class="fw-700 primary-text mt-2">
+                        support@pharmacycrm.example.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">PHARMACY CRM</div>
+                    <p>Premium business application solutions for modern enterprises. Instant delivery, lifetime value.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="about.html">About Product</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="terms.html">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PHARMACY CRM Solutions. All rights reserved. Delivery is instant after payment. No
+                    physical
+                    goods involved.</p>
+                <p class="mt-2 fs-sm">Contact: <a href="mailto:support@pharmacycrm.example.com"
+                        class="primary-text">support@pharmacycrm.example.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import PHONEPE_CONFIG from './assets/config.js';
+
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuBtn.querySelector('i, svg');
+            if (icon) {
+                const isOpen = navLinks.classList.contains('active');
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = menuBtn.querySelector('i, svg');
+                if (icon) {
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
+            });
+        });
+
+        // Payment Flow Script
+        const modal = document.getElementById('checkout-modal');
+        const closeModal = document.getElementById('close-modal');
+        const paymentForm = document.getElementById('payment-form');
+        const buyBtns = document.querySelectorAll('.buy-now-btn');
+
+        const step1 = document.getElementById('checkout-step-1');
+        const successStep = document.getElementById('success-step');
+
+        buyBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const plan = btn.getAttribute('data-plan');
+                const price = btn.getAttribute('data-price');
+                document.getElementById('summary-plan-name').innerText = plan + ' Plan';
+                document.getElementById('summary-price').innerText = price;
+                modal.classList.add('active');
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                step1.style.display = 'block';
+                successStep.classList.remove('active');
+                paymentForm.reset();
+            }, 300);
+        });
+
+        paymentForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const payBtn = document.getElementById('pay-btn');
+            const btnText = payBtn.querySelector('.btn-text');
+            const spinner = payBtn.querySelector('.loading-spinner');
+
+            // 1. UI Loading State
+            btnText.style.display = 'none';
+            spinner.style.display = 'block';
+            payBtn.disabled = true;
+
+            const customerData = {
+                name: document.getElementById('cust-name').value,
+                email: document.getElementById('cust-email').value,
+                phone: document.getElementById('cust-phone').value,
+                plan: document.getElementById('summary-plan-name').innerText,
+                amount: document.getElementById('summary-price').innerText,
+                transactionId: "TXN" + Date.now()
+            };
+
+            console.log("Initiating Payment with Config:", PHONEPE_CONFIG);
+
+            /**
+             * PRODUCTION NOTE:
+             * Real integration ke liye aapko fetch use karna hoga jo niche di gayi hai.
+             * Humne ise comment kiya hai taaki bina API key ke bhi aapka UI demo chale.
+             */
+
+            try {
+                /*
+                const response = await fetch(PHONEPE_CONFIG.SUPABASE_FUNCTION_URL, { 
+                    method: 'POST', 
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(customerData) 
+                });
+                const data = await response.json();
+                if(data.paymentUrl) {
+                    window.location.href = data.paymentUrl; // Real Redirect
+                    return;
+                }
+                */
+
+                // MOCK SUCCESS (For Demo)
+                await new Promise(resolve => setTimeout(resolve, 2000));
+
+                step1.style.display = 'none';
+                successStep.classList.add('active');
+
+                document.getElementById('display-name').innerText = customerData.name;
+                document.getElementById('display-plan').innerText = customerData.plan;
+                document.getElementById('display-email').innerText = customerData.email;
+
+                lucide.createIcons();
+            } catch (error) {
+                console.error("Payment Initiation Error:", error);
+                alert("Something went wrong. Please check config.js");
+                payBtn.disabled = false;
+                btnText.style.display = 'block';
+                spinner.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PHARMACY CRM Support</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid rgba(14, 165, 233, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            font-style: inherit;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" title="PHARMACY CRM Home">
+                <i data-lucide="zap"></i>
+                PHARMACY CRM
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Product</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="index.html#pricing" class="btn-primary">Get App Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="policy-content">
+        <div class="container">
+            <h1 class="text-center">Get in Touch</h1>
+            <p class="text-center muted-text mb-3">Have questions about PHARMACY CRM?
+                We're here to help.</p>
+
+            <div class="grid-contact">
+                <div>
+                    <h2>Support Email</h2>
+                    <p>For technical support and inquiries:</p>
+                    <div class="flex-center justify-start mt-1">
+                        <i data-lucide="mail" class="primary-text"></i>
+                        <span class="fw-700">support@pharmacycrm.example.com</span>
+                    </div>
+
+                    <h2 class="mt-3">Business Help</h2>
+                    <p>Our team is available to assist with license activation and general questions.</p>
+                    <div class="flex-center justify-start mt-1">
+                        <i data-lucide="help-circle" class="primary-text"></i>
+                        <span class="fw-700">help@pharmacycrm.example.com</span>
+                    </div>
+
+                    <div class="mt-3 br-1 contact-note">
+                        <h4 class="primary-text mb-1">Digital Delivery Note</h4>
+                        <p class="fs-sm">All products are delivered digitally via email immediately after
+                            payment verification. No physical products will be shipped.</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" class="form-control" placeholder="I have a question about...">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea class="form-control" rows="5" placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="button" class="btn-primary w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!-- Footer content is same as index.html -->
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">PHARMACY CRM</div>
+                    <p>Premium business application solutions for modern enterprises. Instant delivery, lifetime value.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="about.html">About Product</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="terms.html">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PHARMACY CRM Solutions. All rights reserved. Delivery is instant after payment. No
+                    physical
+                    goods involved.</p>
+                <p class="mt-2 fs-sm">Contact: <a href="mailto:support@pharmacycrm.example.com"
+                        class="primary-text">support@pharmacycrm.example.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuBtn.querySelector('i, svg');
+            if (icon) {
+                const isOpen = navLinks.classList.contains('active');
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>

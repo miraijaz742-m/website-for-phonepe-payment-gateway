@@ -1,0 +1,58 @@
+# SUPABASE EDGE FUNCTION SETUP (For PhonePe)
+
+PhonePe payments ko securely handle karne ke liye aapko yeh backend code apne Supabase project mein dalna hoga. 
+
+### 1. Naya Function Banayein:
+Supabase Dashboard mein jaakar 'Edge Functions' mein ek naya function banayein (e.g., `phonepe-payment`).
+
+### 2. Yeh Code Paste Karein (Deno/Typescript):
+
+```typescript
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
+import { crypto } from "https://deno.land/std@0.168.0/crypto/mod.ts"
+
+const MERCHANT_ID = "YOUR_REAL_MERCHANT_ID"
+const SALT_KEY = "YOUR_REAL_SALT_KEY"
+const SALT_INDEX = "1"
+const PHONEPE_URL = "https://api.phonepe.com/apis/hermes/pg/v1/pay" // Production URL
+
+serve(async (req) => {
+  const { name, email, phone, amount, transactionId } = await req.json()
+
+  const payload = {
+    merchantId: MERCHANT_ID,
+    merchantTransactionId: transactionId,
+    merchantUserId: "U" + Date.now(),
+    amount: parseInt(amount.replace(/[^0-9]/g, "")) * 100, // Rs to Paisa
+    redirectUrl: "https://your-website.com/success.html",
+    redirectMode: "REDIRECT",
+    callbackUrl: "https://your-website.com/api/callback",
+    mobileNumber: phone,
+    paymentInstrument: { type: "PAY_PAGE" },
+  }
+
+  const base64Payload = btoa(JSON.stringify(payload))
+  const stringToSign = base64Payload + "/pg/v1/pay" + SALT_KEY
+  const sha256 = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(stringToSign))
+  const checksum = Array.from(new Uint8Array(sha256)).map(b => b.toString(16).padStart(2, "0")).join("") + "###" + SALT_INDEX
+
+  const response = await fetch(PHONEPE_URL, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+        "X-VERIFY": checksum,
+    },
+    body: JSON.stringify({ request: base64Payload }),
+  })
+
+  const resData = await response.json()
+  return new Response(JSON.stringify({ paymentUrl: resData.data.instrumentResponse.redirectInfo.url }), {
+    headers: { "Content-Type": "application/json" },
+  })
+})
+```
+
+### 3. Config.js Update Karein:
+Apne `assets/config.js` mein jaakar `SUPABASE_FUNCTION_URL` ko apne naye function ke URL se badal dein.
+
+Bas! Itna karne ke baad aapka payment live ho jayega.

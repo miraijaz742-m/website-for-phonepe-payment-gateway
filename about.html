@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About PHARMACY CRM - Leading Business Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" title="PHARMACY CRM Home">
+                <i data-lucide="zap"></i>
+                PHARMACY CRM
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Product</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="index.html#pricing" class="btn-primary">Get App Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="policy-content">
+        <div class="container">
+            <h1>About PHARMACY CRM</h1>
+            <section class="mb-4">
+                <h2>Our Mission</h2>
+                <p>PHARMACY CRM was born out of a simple need: to provide high-quality, professional business tools that
+                    are
+                    accessible, easy to use, and delivered instantly. We understand that in the modern digital age,
+                    speed and reliability are paramount.</p>
+                <p>Our application is a result of years of development and feedback from business professionals across
+                    the globe. We've built a tool that simplifies complex tasks and boosts productivity across all
+                    platforms.</p>
+            </section>
+
+            <section class="mb-4 grid-2">
+                <div>
+                    <h2>Digital First</h2>
+                    <p>Unlike traditional software, PHARMACY CRM is 100% digital. We believe in providing value
+                        immediately.
+                        That's why we've streamlined our delivery process to ensure you get your product the moment your
+                        payment is confirmed.</p>
+                    <ul class="mt-3">
+                        <li class="mb-1"><i data-lucide="check" class="primary-text"></i> No physical shipping wait
+                            times</li>
+                        <li class="mb-1"><i data-lucide="check" class="primary-text"></i> Instant link and license
+                            delivery</li>
+                        <li class="mb-1"><i data-lucide="check" class="primary-text"></i> Eco-friendly digital
+                            distribution</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+                        alt="About PHARMACY CRM" class="w-full br-1 shadow-md">
+                </div>
+            </section>
+
+            <section>
+                <h2>Why It Works</h2>
+                <p>PHARMACY CRM combines a powerful backend engine with a clean, intuitive user interface. Whether
+                    you're on a
+                    high-end desktop workstation or a mobile device in the field, PHARMACY CRM adapts to your needs,
+                    providing
+                    a consistent and efficient experience.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">PHARMACY CRM</div>
+                    <p>Premium business application solutions for modern enterprises. Instant delivery, lifetime value.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="about.html">About Product</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="terms.html">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PHARMACY CRM Solutions. All rights reserved. Delivery is instant after payment. No
+                    physical
+                    goods involved.</p>
+                <p class="mt-2 fs-sm">Contact: <a href="mailto:support@pharmacycrm.example.com"
+                        class="primary-text">support@pharmacycrm.example.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuBtn.querySelector('i, svg');
+            if (icon) {
+                const isOpen = navLinks.classList.contains('active');
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>

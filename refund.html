@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund and Cancellation Policy - PHARMACY CRM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" title="PHARMACY CRM Home">
+                <i data-lucide="zap"></i>
+                PHARMACY CRM
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Product</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html#pricing" class="btn-primary">Get App Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="policy-content">
+        <div class="container">
+            <h1>Refund and Cancellation Policy</h1>
+            <p>Thank you for choosing PHARMACY CRM. Please read our policy regarding refunds and cancellations for our
+                digital
+                products.</p>
+
+            <h2>1. Nature of Product</h2>
+            <p>PHARMACY CRM is a digital software product. Due to the nature of digital goods, which are delivered
+                instantly
+                and cannot be physically "returned," we generally do not offer refunds once the license key has been
+                delivered to your email.</p>
+
+            <h2>2. Refund Eligibility</h2>
+            <p>We only consider refund requests under the following circumstances:</p>
+            <ul>
+                <li><strong>Technical Issues:</strong> If you experience a critical technical issue that our support
+                    team cannot resolve within 7 business days.</li>
+                <li><strong>Duplicate Purchase:</strong> If you accidentally purchased the same product twice.</li>
+                <li><strong>Non-delivery:</strong> If the automated delivery system fails and we are unable to provide
+                    the product manually within 48 hours.</li>
+            </ul>
+
+            <h2>3. Refund Request Process</h2>
+            <p>To request a refund, please email support@pharmacycrm.example.com within 7 days of your purchase with
+                your
+                order ID and the reason for the request. We will review your request and notify you of the approval or
+                rejection within 3-5 business days.</p>
+
+            <h2>4. Cancellations</h2>
+            <p>Since the product is delivered instantly upon payment, orders cannot be cancelled once the payment
+                process is completed. Please ensure you review the product details and system requirements before making
+                a purchase.</p>
+
+            <h2>5. Processing Refunds</h2>
+            <p>If approved, your refund will be processed, and a credit will automatically be applied to your original
+                method of payment (e.g., via PhonePe) within 7-10 business days.</p>
+
+            <h2>Contact Us</h2>
+            <p>For any questions related to refunds, please contact us at support@pharmacycrm.example.com.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">PHARMACY CRM</div>
+                    <p>Premium business application solutions for modern enterprises. Instant delivery, lifetime value.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="terms.html">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PHARMACY CRM Solutions. All rights reserved. Transparent and Customer-Focused.</p>
+                <p class="mt-2 fs-sm">Contact: <a href="mailto:support@pharmacycrm.example.com"
+                        class="primary-text">support@pharmacycrm.example.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuBtn.querySelector('i, svg');
+            if (icon) {
+                const isOpen = navLinks.classList.contains('active');
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>
